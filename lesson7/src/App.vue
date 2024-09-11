@@ -1,12 +1,27 @@
 <script setup>
 import { RouterLink, RouterView } from 'vue-router'
 import task7 from './components/task7.vue';
+import task7_2 from './components/task7_2.vue';
+import task7_3 from './components/task7_3.vue';
 </script>
 
 <template>
-  <task7>
-    
-  </task7>
+  <div class="grid">
+    <div class="tasks">
+      Slots:
+      <task7 />
+    </div>
+    <div class="tasks">
+      Mixins:
+      <task7_2 />
+    </div>
+    <div class="tasks">
+      Directives
+      <task7_3/>
+    </div>
+  </div>
+  
+
 
   <RouterView />
 </template>
@@ -17,16 +32,15 @@ header {
   max-height: 100vh;
 }
 
-.logo {
-  display: block;
-  margin: 0 auto 2rem;
+.grid {
+  display: grid;
 }
-
-nav {
-  width: 100%;
-  font-size: 12px;
-  text-align: center;
-  margin-top: 2rem;
+.tasks {
+  background-color: rgb(145, 194, 132);
+  color: black;
+  padding: 15px;
+  margin: 15px;
+  border-radius: 15px;
 }
 
 nav a.router-link-exact-active {
